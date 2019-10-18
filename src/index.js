@@ -4,6 +4,7 @@ import { Stage, Layer, Image, Text } from "react-konva";
 import FreePathDrawable from "./drawables/FreePathDrawable";
 import ArrowDrawable from "./drawables/ArrowDrawable";
 import CircleDrawable from "./drawables/CircleDrawable";
+import SquareDrawable from "./drawables/SquareDrawable";
 import TextDrawable from "./drawables/TextDrawable";
 import Toolbar from "./toolbar/Toolbar";
 import Styles from "./index.module.css";
@@ -33,7 +34,6 @@ export default class SpproImageAnnote extends Component {
 
 
   /* Events */
-
   onload = () => {
     this.setState({ status: 'loaded' });
   }
@@ -69,6 +69,7 @@ export default class SpproImageAnnote extends Component {
           this.state.newDrawableType,
           this.state.drawables.length
         );
+        console.log("newDrawable", newDrawable);
         this.setState({
           newDrawable: [newDrawable]
         });
@@ -143,6 +144,7 @@ export default class SpproImageAnnote extends Component {
       FreePathDrawable,
       ArrowDrawable,
       CircleDrawable,
+      SquareDrawable,
       TextDrawable
     };
     return new drawableClasses[type](x, y, this.state.color, key);

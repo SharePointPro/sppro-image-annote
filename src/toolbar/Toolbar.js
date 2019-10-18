@@ -1,7 +1,7 @@
 import React, { Component }  from "react";
 import Styles from "./toolbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPencilAlt, faCircle, faLongArrowAltRight, faFont, faSquareFull, faUndo, faSave} from '@fortawesome/free-solid-svg-icons'
+import { faPencilAlt, faCircle, faSquare, faLongArrowAltRight, faFont, faSquareFull, faUndo, faSave} from '@fortawesome/free-solid-svg-icons'
 import ToolbarButton from "./ToolbarButton";
 import { PhotoshopPicker } from 'react-color';
 
@@ -38,6 +38,7 @@ export default class Toolbar extends Component {
                 <table className={Styles.toolbarTable}>
                     <tbody>
                         <ToolbarButton selected={this.state.selected === "FreePathDrawable"} onClick={(e) => this.onDrawableChange("FreePathDrawable")}><FontAwesomeIcon icon={faPencilAlt} color="white" /></ToolbarButton>
+                        <ToolbarButton selected={this.state.selected === "SquareDrawable"} onClick={(e) => this.onDrawableChange("SquareDrawable")}><FontAwesomeIcon icon={faSquare} color="white" /></ToolbarButton>
                         <ToolbarButton selected={this.state.selected === "CircleDrawable"} onClick={(e) => this.onDrawableChange("CircleDrawable")}><FontAwesomeIcon icon={faCircle} color="white" /></ToolbarButton>
                         <ToolbarButton selected={this.state.selected === "ArrowDrawable"} onClick={(e) => this.onDrawableChange("ArrowDrawable")}><FontAwesomeIcon icon={faLongArrowAltRight} color="white" /></ToolbarButton>
                         <ToolbarButton selected={this.state.selected === "TextDrawable"} onClick={(e) => this.onDrawableChange("TextDrawable")}><FontAwesomeIcon icon={faFont} color="white" /></ToolbarButton>
