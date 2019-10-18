@@ -7,6 +7,9 @@ import CircleDrawable from "./drawables/CircleDrawable";
 import SquareDrawable from "./drawables/SquareDrawable";
 import TextDrawable from "./drawables/TextDrawable";
 import Toolbar from "./toolbar/Toolbar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+
 import Styles from "./index.module.css";
 
 const DEFAULT_COLOR = "black";
@@ -124,12 +127,19 @@ export default class SpproImageAnnote extends Component {
     let { drawables } = this.state;
     if (drawables && drawables.length > 0) {
       drawables.pop();
-    }else{
+    } else {
       drawables = [];
     }
     this.setState({
       newDrawable: [],
       drawables
+    });
+  }
+
+  onClear = () => {
+    this.setState({
+      newDrawable: [],
+      drawables: []
     });
   }
 
@@ -155,11 +165,13 @@ export default class SpproImageAnnote extends Component {
     const drawables = [...this.state.drawables, ...this.state.newDrawable];
     if (this.state.status === 'loaded') {
       return (
-        <div className={Styles.overlay}>
+        <div className={Styles.overlay + " sppro-overlay"}>
+          {this.props.onClose && <div className={Styles.closeButton}><FontAwesomeIcon onClick={this.props.onClose} icon={faTimes} color="white" size="lg" /></div>}
           <Toolbar
             onClick={this.onDrawableTypeChange}
             onColorChanged={(color) => this.setState({ color: color })}
             onUndo={this.onUndo}
+            onClear={this.onClear}
             onSave={this.onSave}
             defaultColor={DEFAULT_COLOR} />
           <div className={Styles.centeredBox}>

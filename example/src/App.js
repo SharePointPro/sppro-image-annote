@@ -10,10 +10,14 @@ export default class App extends Component {
     downloadURI(base64, 'stage.png');
   }
 
+  onClose = () => {
+    alert("close window");
+  }
+
   render() {
     return (
       <div>
-        <SpproImageAnnote url={roomImage} onSave={this.onSave} />
+        <SpproImageAnnote url={roomImage} onSave={this.onSave} onClose={this.onClose} />
       </div>
     )
   }

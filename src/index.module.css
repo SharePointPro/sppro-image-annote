@@ -11,6 +11,13 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,.6);
+    z-index:1000;
+}
+.closeButton {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
 }
 .crosshair {
     cursor: crosshair;

@@ -1,6 +1,6 @@
 {
   "name": "sppro-image-annote",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Image Annotation in React",
   "author": "SharePointPro",
   "license": "MIT",
@@ -63,9 +63,5 @@
   },
   "files": [
     "dist"
-  ],
-  "dependencies": {
-    "konva": "file:node_modules/konva",
-    "react-konva": "file:node_modules/react-konva"
-  }
+  ]
 }

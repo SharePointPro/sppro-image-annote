@@ -1,7 +1,16 @@
 import React, { Component }  from "react";
 import Styles from "./toolbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPencilAlt, faCircle, faSquare, faLongArrowAltRight, faFont, faSquareFull, faUndo, faSave} from '@fortawesome/free-solid-svg-icons'
+import { faPencilAlt, 
+    faCircle, 
+    faSquare, 
+    faLongArrowAltRight, 
+    faFont, 
+    faSquareFull, 
+    faUndo, 
+    faSave, 
+    faSync,
+    faBan} from '@fortawesome/free-solid-svg-icons';
 import ToolbarButton from "./ToolbarButton";
 import { PhotoshopPicker } from 'react-color';
 
@@ -34,7 +43,7 @@ export default class Toolbar extends Component {
     
     render() {
         return (
-            <div className={Styles.toolbar}>
+            <div className={Styles.toolbar + " sppro-toolbar"}>
                 <table className={Styles.toolbarTable}>
                     <tbody>
                         <ToolbarButton selected={this.state.selected === "FreePathDrawable"} onClick={(e) => this.onDrawableChange("FreePathDrawable")}><FontAwesomeIcon icon={faPencilAlt} color="white" /></ToolbarButton>
@@ -44,6 +53,7 @@ export default class Toolbar extends Component {
                         <ToolbarButton selected={this.state.selected === "TextDrawable"} onClick={(e) => this.onDrawableChange("TextDrawable")}><FontAwesomeIcon icon={faFont} color="white" /></ToolbarButton>
                         <ToolbarButton><FontAwesomeIcon onClick={this.onShowColor} icon={faSquareFull} color={this.state.color} /></ToolbarButton>
                         <ToolbarButton><FontAwesomeIcon onClick={this.props.onUndo} icon={faUndo} color="white" /></ToolbarButton>
+                        <ToolbarButton><FontAwesomeIcon onClick={this.props.onClear} icon={faBan} color="white" /></ToolbarButton>
                         <ToolbarButton><FontAwesomeIcon onClick={this.props.onSave} icon={faSave} color="white" /></ToolbarButton>
 
                     </tbody>
