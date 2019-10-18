@@ -41,12 +41,12 @@ url: URL of the image to be edited
 Thanks to https://konvajs.org/ for the great library
 
 # Dependencies
-   konva,
+   konva,   
    react-konva,
    @fortawesome/fontawesome-svg-core,
    @fortawesome/free-solid-svg-iconsm,
    @fortawesome/react-fontawesome,
-   react-color"
+   react-color
 
 ## License
 
