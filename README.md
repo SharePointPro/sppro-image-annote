@@ -37,6 +37,11 @@ onSave : Return Base64 of edited image
 
 url: URL of the image to be edited
 
+## Style overrides
+Add the below style classes to your project to override default 
+.sppro-overlay //Background overlay styles
+.sppro-toolbar //Toolbar styles
+
 ## Special thanks
 Thanks to https://konvajs.org/ for the great library
 
