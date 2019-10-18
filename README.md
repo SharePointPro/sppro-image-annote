@@ -27,6 +27,7 @@ class Example extends Component {
 
 ## API
 onSave : Return Base64 of edited image
+
 url: URL of the image to be edited
 
 ## License
