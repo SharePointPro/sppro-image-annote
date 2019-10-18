@@ -1,13 +1,30 @@
 import React, { Component } from 'react'
-
-import ExampleComponent from 'sppro-image-annote'
+import roomImage from './images/room.jpg';
+import SpproImageAnnote from 'sppro-image-annote'
 
 export default class App extends Component {
-  render () {
+
+
+
+  onSave = (base64) => {
+    downloadURI(base64, 'stage.png');
+  }
+
+  render() {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <SpproImageAnnote url={roomImage} onSave={this.onSave} />
       </div>
     )
   }
+}
+
+// function from https://stackoverflow.com/a/15832662/512042
+function downloadURI(uri, name) {
+  var link = document.createElement('a');
+  link.download = name;
+  link.href = uri;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }

@@ -1,0 +1,28 @@
+.toolbar {
+    position: fixed;
+    left: 0;
+    width: 50px;
+    bottom: 0;
+    top: 0;
+    border: 1px solid rgb(136, 136, 136);
+    background: #333;
+    border-radius: 5px;
+}
+.toolButton {
+    overflow: hidden;
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    background-color: #333;
+    box-shadow: 0 0 2px #66a;
+    padding: 1px;
+    margin: 0;
+    cursor: pointer;
+}
+.toolbarTable{
+    width: 100%;
+    text-align: center;
+}
+.active {
+    background-color: rgba(0,0,0,.5);
+}
