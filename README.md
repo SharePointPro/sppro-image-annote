@@ -1,4 +1,5 @@
 # sppro-image-annote
+<<<<<<< HEAD
 
 > Image Annotation in React
 
@@ -29,3 +30,6 @@ class Example extends Component {
 ## License
 
 MIT © [SharePointPro](https://github.com/SharePointPro)
+=======
+Simple react Image annotation library
+>>>>>>> 744d6d373bd04f60d6f5be6339db61f68586ff6e
