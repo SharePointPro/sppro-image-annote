@@ -21,7 +21,7 @@ npm install --save sppro-image-annote
 ```jsx
 import React, { Component } from 'react'
 
-import UpdateOrderorBillStatus from 'sppro-image-annote'
+import SpproImageAnnote from 'sppro-image-annote'
 
 class Example extends Component {
   render () {
