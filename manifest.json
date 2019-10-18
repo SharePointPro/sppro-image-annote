@@ -1,0 +1,8 @@
+{
+  "short_name": "sppro-image-annote",
+  "name": "sppro-image-annote",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
