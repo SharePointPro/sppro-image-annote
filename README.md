@@ -1,6 +1,4 @@
 # sppro-image-annote
-<<<<<<< HEAD
-
 > Image Annotation in React
 
 [![NPM](https://img.shields.io/npm/v/sppro-image-annote.svg)](https://www.npmjs.com/package/sppro-image-annote) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -21,11 +19,15 @@ import MyComponent from 'sppro-image-annote'
 class Example extends Component {
   render () {
     return (
-      <MyComponent />
+         <SpproImageAnnote url={roomImage} onSave={this.onSave} />
     )
   }
 }
 ```
+
+## API
+onSave : Return Base64 of edited image
+url: URL of the image to be edited
 
 ## License
 
