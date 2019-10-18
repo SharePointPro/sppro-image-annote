@@ -4,6 +4,10 @@
 Live Demo:
 https://sharepointpro.github.io/sppro-image-annote/
 
+Screenshot:
+![Screen shot](https://sharepointpro.github.io/sppro-image-annote/imageannote.PNG "Optional title")
+
+
 [![NPM](https://img.shields.io/npm/v/sppro-image-annote.svg)](https://www.npmjs.com/package/sppro-image-annote) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
