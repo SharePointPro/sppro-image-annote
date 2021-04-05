@@ -1,4 +1,4 @@
-# sppro-image-annoteCancel Changes
+# sppro-image-annote
 > Image Annotation in React
 
 ## Angular Version:
